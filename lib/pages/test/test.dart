@@ -11,12 +11,7 @@ class TestPage extends StatelessWidget {
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              new RaisedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Text('返回'),
-              ),
+              new Text('This is a test page',),
             ],
           )
       ),

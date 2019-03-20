@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'routes.dart';
+import 'package:flutter_tutorial/routes.dart';
+
+import 'package:flutter_tutorial/home.dart';
 
 void main() => runApp(new MyApp());
 
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/',
+      home: new MyHomePage(title: 'Flutter Tutorials'),
       routes: routes,
     );
   }

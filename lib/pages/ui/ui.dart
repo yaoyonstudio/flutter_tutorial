@@ -7,25 +7,20 @@ class UiPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Flutter UI"),
       ),
-      body: Center(
-          child: new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              new RaisedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Text('返回'),
-              ),
-            ],
-          )
-      ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
-        tooltip: 'Go Back',
-        child: new Icon(Icons.arrow_back_ios),
+      body: new Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          new Container(
+            padding: new EdgeInsets.all(10.0),
+            height: 72.0,
+            child: new FlatButton(
+                onPressed: () => {},
+                color: Colors.lightBlueAccent,
+                child: new Text('Sliders')),
+          ),
+          new Text('text33'),
+        ],
       ),
     );
   }
