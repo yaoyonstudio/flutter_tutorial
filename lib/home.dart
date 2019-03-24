@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_tutorial/pages/ui/ui.dart';
 import 'package:flutter_tutorial/pages/test/test.dart';
+import 'package:flutter_tutorial/pages/others/others.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -21,7 +22,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     super.initState();
 
     // 初始化Tab Controller
-    controller = new TabController(length: 2, vsync: this);
+    controller = new TabController(length: 3, vsync: this);
   }
 
   @override
@@ -35,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   Widget build(BuildContext context) {
     return new Scaffold(
       body: new TabBarView(
-        children: <Widget>[new UiPage(), new TestPage()],
+        children: <Widget>[new UiPage(), new TestPage(), new OthersPage()],
         controller: controller,
       ),
       bottomNavigationBar: new Material(
@@ -48,28 +49,17 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
           indicatorWeight: 0.01,
           tabs: <Tab>[
             new Tab(
-              child: Padding(
-                padding: EdgeInsets.only(top: 4.0, bottom: 0.0,),
-                child: Column(
-                  children: <Widget>[
-                    Icon(Icons.widgets, size: 20.0,),
-                    Text('UI', ),
-                  ],
-                )
-              ),
+              text: 'UI',
+              icon: Icon(Icons.widgets),
             ),
             new Tab(
-              child: Padding(
-                padding: EdgeInsets.only(top: 4.0, bottom: 0.0,),
-                child: Column(
-                  children: <Widget>[
-                    Icon(Icons.toys, size: 20.0,),
-                    Text('测试', ),
-                  ],
-                )
-              ),
+              text: '测试',
+              icon: Icon(Icons.toys),
             ),
-
+            new Tab(
+              text: '其他',
+              icon: Icon(Icons.star),
+            ),
           ],
           controller: controller,
         ),
