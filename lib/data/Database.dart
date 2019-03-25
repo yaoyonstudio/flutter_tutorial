@@ -68,7 +68,7 @@ class DBProvider {
     List<Map<String, dynamic>> res;
     if (isDone == 1 || isDone == 0) {
       if (title != '' && title != null) {
-        var sql = 'SELECT * FROM Todo WHERE title LIKE "%' + title + '%" AND isDone = "1"';
+        var sql = 'SELECT * FROM Todo WHERE title LIKE "%' + title + '%" AND isDone = "' + isDone.toString() + '"';
         res =
         await db.rawQuery(sql);
       } else {

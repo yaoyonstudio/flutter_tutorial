@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_tutorial/pages/ui/ui.dart';
+import 'package:flutter_tutorial/pages/api/api.dart';
 import 'package:flutter_tutorial/pages/test/test.dart';
 import 'package:flutter_tutorial/pages/others/others.dart';
 
@@ -36,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   Widget build(BuildContext context) {
     return new Scaffold(
       body: new TabBarView(
-        children: <Widget>[new UiPage(), new TestPage(), new OthersPage()],
+        children: <Widget>[new UiPage(), new ApiPage(), new OthersPage()],
         controller: controller,
       ),
       bottomNavigationBar: new Material(

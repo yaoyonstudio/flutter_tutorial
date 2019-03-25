@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_tutorial/components/common/LinkButton.dart';
 
-class UiPage extends StatelessWidget {
+class ApiPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Flutter UI"),
+        title: Text("API"),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -16,8 +16,7 @@ class UiPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Text('UI'),
-//              LinkButton(title: 'Slider', link: '/slider',),
+              LinkButton(title: '选择图片/视频', link: '/pick_image',),
 //              LinkButton(title: 'Photo', link: '/photo',)
             ],
           ),
