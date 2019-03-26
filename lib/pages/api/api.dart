@@ -17,7 +17,11 @@ class ApiPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               LinkButton(title: '选择图片/视频', link: '/pick_image',),
-//              LinkButton(title: 'Photo', link: '/photo',)
+              LinkButton(title: '播放视频', link: '/video_player',),
+              LinkButton(title: '设备信息', link: '/device_info',),
+              LinkButton(title: '打开浏览器/电话/邮件/短信(UrlLauncher)', link: '/url_launcher',),
+              LinkButton(title: 'Webview(使用webview_flutter)', link: '/webview',),
+              LinkButton(title: 'Flutter Webview', link: '/flutter_webview',),
             ],
           ),
         ),

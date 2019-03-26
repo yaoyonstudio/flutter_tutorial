@@ -16,8 +16,7 @@ class UiPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Text('UI'),
-//              LinkButton(title: 'Slider', link: '/slider',),
+              LinkButton(title: 'Swiper', link: '/swiper',),
 //              LinkButton(title: 'Photo', link: '/photo',)
             ],
           ),
