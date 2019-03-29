@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:scoped_model/scoped_model.dart';
 
-import 'package:flutter_tutorial/pages/others/communication/inherited_widget/MyInheritedWidget.dart';
+import 'package:flutter_tutorial/pages/others/communication/scoped_model_demo/MyItemModel.dart';
 
-import 'package:flutter_tutorial/pages/others/communication/inherited_widget/WidgetA.dart';
-import 'package:flutter_tutorial/pages/others/communication/inherited_widget/WidgetB.dart';
-import 'package:flutter_tutorial/pages/others/communication/inherited_widget/WidgetC.dart';
+import 'package:flutter_tutorial/pages/others/communication/scoped_model_demo/WidgetA.dart';
+import 'package:flutter_tutorial/pages/others/communication/scoped_model_demo/WidgetB.dart';
+import 'package:flutter_tutorial/pages/others/communication/scoped_model_demo/WidgetC.dart';
 
-class ParentPage extends StatefulWidget {
-  ParentPage({Key key, this.title}) : super(key: key);
+class ParentPage3 extends StatefulWidget {
+  ParentPage3({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _ParentPageState createState() => new _ParentPageState();
+  _ParentPage3State createState() => new _ParentPage3State();
 }
 
-class _ParentPageState extends State<ParentPage> {
+class _ParentPage3State extends State<ParentPage3> {
+
   @override
   void initState() {
     super.initState();
@@ -23,11 +25,12 @@ class _ParentPageState extends State<ParentPage> {
 
   @override
   Widget build(BuildContext context) {
-    return MyInheritedWidget(
+    return ScopedModel(
+      model: MyItemModel(),
       child: Scaffold(
-        appBar: new AppBar(
-          title: new Text('Inherited Widget Demo'),
-        ),
+         appBar: new AppBar(
+         title: new Text('Inherited Widget Demo'),
+         ),
         body: Container(
           decoration: BoxDecoration(color: Colors.blueGrey),
           width: MediaQuery.of(context).size.width,
@@ -58,7 +61,3 @@ class _ParentPageState extends State<ParentPage> {
     );
   }
 }
-
-//////////////////////////////////////
-
-

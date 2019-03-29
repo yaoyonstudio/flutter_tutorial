@@ -33,10 +33,10 @@ class FlutterWebviewPage extends StatelessWidget {
           );
           break;
         case WebViewState.finishLoad:
-
-
           break;
         case WebViewState.shouldStart:
+          break;
+        default:
           break;
       }
     });

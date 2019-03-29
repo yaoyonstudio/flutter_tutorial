@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class _MyInherited extends InheritedWidget {
   _MyInherited({
     Key key,
@@ -37,8 +36,10 @@ class MyInheritedWidgetState extends State<MyInheritedWidget> {
   /// List of Items
   List<String> _items = <String>[];
 
-  /// Getter (number of items)
+  /// Getter
   int get itemsCount => _items.length;
+
+  List<String> get items => _items;
 
   /// Helper method to add an Item
   void addItem(String reference) {
