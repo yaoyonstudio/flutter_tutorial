@@ -4,6 +4,7 @@ import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 import 'package:flutter_tutorial/pages/ui/ui.dart';
 import 'package:flutter_tutorial/pages/ui/swiper.dart';
+import 'package:flutter_tutorial/pages/ui/slidableListItem.dart';
 
 import 'package:flutter_tutorial/pages/test/test.dart';
 
@@ -22,10 +23,15 @@ import 'package:flutter_tutorial/pages/api/flutter_webview_box.dart';
 
 import 'package:flutter_tutorial/pages/others/Forms.dart';
 import 'package:flutter_tutorial/pages/others/Todos.dart';
+import 'package:flutter_tutorial/pages/others/communication/inherited_widget/ParentPage.dart';
+
 
 final Map<String, WidgetBuilder> routes = {
   '/ui': (BuildContext context) => new UiPage(),
   '/swiper': (BuildContext context) => new SwiperPage(),
+  '/slidable_list_item': (BuildContext context) => new SlidableListItemPage (),
+
+
   '/api': (BuildContext context) => new ApiPage(),
   '/pick_image': (BuildContext context) => new PickImagePage(),
   '/video_player': (BuildContext context) => new VideoPlayerPage(),
@@ -54,4 +60,5 @@ final Map<String, WidgetBuilder> routes = {
   '/url_launcher': (BuildContext context) => new UrlLauncher(),
   '/forms': (BuildContext context) => new Forms(),
   '/todos': (BuildContext context) => new Todos(),
+  '/inherited_widget': (BuildContext context) => new ParentPage(),
 };

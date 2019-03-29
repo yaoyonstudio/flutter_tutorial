@@ -19,6 +19,7 @@ class OthersPage extends StatelessWidget {
             children: <Widget>[
               LinkButton(title: 'Forms', link: '/forms',),
               LinkButton(title: 'Todos', link: '/todos',),
+              LinkButton(title: 'Inherited Widget', link: '/inherited_widget',),
             ],
           ),
         ),
