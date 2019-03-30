@@ -26,7 +26,7 @@ import 'package:flutter_tutorial/pages/others/Todos.dart';
 import 'package:flutter_tutorial/pages/others/communication/inherited_widget/ParentPage.dart';
 import 'package:flutter_tutorial/pages/others/communication/inherited_widget2/ParentPage2.dart';
 import 'package:flutter_tutorial/pages/others/communication/scoped_model_demo/ParentPage3.dart';
-
+import 'package:flutter_tutorial/pages/others/communication/redux_demo/ReduxTodo.dart';
 
 final Map<String, WidgetBuilder> routes = {
   '/ui': (BuildContext context) => new UiPage(),
@@ -65,4 +65,5 @@ final Map<String, WidgetBuilder> routes = {
   '/inherited_widget': (BuildContext context) => new ParentPage(),
   '/inherited_widget2': (BuildContext context) => new ParentPage2(),
   '/scoped_model_demo': (BuildContext context) => new ParentPage3(),
+  '/redux_todo_demo': (BuildContext context) => new ReduxTodo(),
 };
