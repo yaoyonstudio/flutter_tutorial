@@ -7,6 +7,7 @@ class OthersPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("Flutter Others"),
       ),
@@ -17,6 +18,7 @@ class OthersPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
+              LinkButton(title: 'Cupertino Widgets', link: '/cupertino',),
               LinkButton(title: 'Forms', link: '/forms',),
               LinkButton(title: 'Todos', link: '/todos',),
               LinkButton(title: 'Inherited Widget', link: '/inherited_widget',),

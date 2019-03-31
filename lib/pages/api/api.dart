@@ -6,6 +6,7 @@ class ApiPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("API"),
       ),
@@ -22,6 +23,8 @@ class ApiPage extends StatelessWidget {
               LinkButton(title: '打开浏览器/电话/邮件/短信(UrlLauncher)', link: '/url_launcher',),
               LinkButton(title: 'Webview(使用webview_flutter)', link: '/webview',),
               LinkButton(title: 'Flutter Webview', link: '/flutter_webview',),
+              LinkButton(title: 'Flutter Toast', link: '/flutter_toast',),
+              LinkButton(title: 'Avatar Cropper', link: '/avatar_cropper',),
             ],
           ),
         ),

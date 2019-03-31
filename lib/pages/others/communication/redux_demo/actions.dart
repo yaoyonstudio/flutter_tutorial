@@ -1,15 +1,12 @@
-import 'package:flutter_tutorial/pages/others/communication/redux_demo/model.dart';
+import 'package:flutter_tutorial/pages/others/communication/redux_demo/model/model.dart';
 
 class AddItemAction {
-  static int _id = 0;
+  static String _id;
   final String title;
 
+  AddItemAction(this.title);
 
-  AddItemAction(this.title){
-    _id++;
-  }
-
-  int get id => _id;
+  String get id => _id;
 }
 
 class RemoveItemAction {
@@ -18,6 +15,4 @@ class RemoveItemAction {
   RemoveItemAction(this.todo);
 }
 
-class RemoveItemsAction {
-
-}
+class RemoveItemsAction {}

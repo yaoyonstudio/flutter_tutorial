@@ -17,6 +17,8 @@ import 'package:flutter_tutorial/pages/api/webview_page_two.dart';
 import 'package:flutter_tutorial/pages/api/webview_page_three.dart';
 import 'package:flutter_tutorial/pages/api/device_info.dart';
 import 'package:flutter_tutorial/pages/api/url_launcher.dart';
+import 'package:flutter_tutorial/pages/api/flutter_toast.dart';
+import 'package:flutter_tutorial/pages/api/avatar.dart';
 
 import 'package:flutter_tutorial/pages/api/flutter_webview.dart';
 import 'package:flutter_tutorial/pages/api/flutter_webview_box.dart';
@@ -27,6 +29,8 @@ import 'package:flutter_tutorial/pages/others/communication/inherited_widget/Par
 import 'package:flutter_tutorial/pages/others/communication/inherited_widget2/ParentPage2.dart';
 import 'package:flutter_tutorial/pages/others/communication/scoped_model_demo/ParentPage3.dart';
 import 'package:flutter_tutorial/pages/others/communication/redux_demo/ReduxTodo.dart';
+
+import 'package:flutter_tutorial/pages/others/CupertinoWidgets.dart';
 
 final Map<String, WidgetBuilder> routes = {
   '/ui': (BuildContext context) => new UiPage(),
@@ -60,8 +64,11 @@ final Map<String, WidgetBuilder> routes = {
   '/flutter_webview_box': (BuildContext context) => new FlutterWebviewBoxPage(),
   '/device_info': (BuildContext context) => new DeviceInfo(),
   '/url_launcher': (BuildContext context) => new UrlLauncher(),
+  '/flutter_toast': (BuildContext context) => new FlutterToastPage(),
+  '/avatar_cropper': (BuildContext context) => new AvatarPage(),
   '/forms': (BuildContext context) => new Forms(),
   '/todos': (BuildContext context) => new Todos(),
+  '/cupertino': (BuildContext context) => new CupertinoWidgets(),
   '/inherited_widget': (BuildContext context) => new ParentPage(),
   '/inherited_widget2': (BuildContext context) => new ParentPage2(),
   '/scoped_model_demo': (BuildContext context) => new ParentPage3(),

@@ -167,6 +167,7 @@ class _TodosState extends State<Todos> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      backgroundColor: Colors.white,
       appBar: new AppBar(
         title: Text('Todo'),
       ),

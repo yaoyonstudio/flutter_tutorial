@@ -23,7 +23,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     super.initState();
 
     // 初始化Tab Controller
-    controller = new TabController(length: 3, vsync: this);
+    controller = new TabController(length: 4, vsync: this);
   }
 
   @override
@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   Widget build(BuildContext context) {
     return new Scaffold(
       body: new TabBarView(
-        children: <Widget>[new UiPage(), new ApiPage(), new OthersPage()],
+        children: <Widget>[new UiPage(), new ApiPage(), new OthersPage(), new TestPage()],
         controller: controller,
       ),
       bottomNavigationBar: new Material(
@@ -60,6 +60,10 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
             new Tab(
               text: '其他',
               icon: Icon(Icons.star),
+            ),
+            new Tab(
+              text: '测试',
+              icon: Icon(Icons.adb),
             ),
           ],
           controller: controller,
