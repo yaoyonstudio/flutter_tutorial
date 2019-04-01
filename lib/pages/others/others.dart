@@ -25,6 +25,8 @@ class OthersPage extends StatelessWidget {
               LinkButton(title: 'Inherited Widget 2', link: '/inherited_widget2',),
               LinkButton(title: 'Scoped Model Demo', link: '/scoped_model_demo',),
               LinkButton(title: 'Redux Todo Demo', link: '/redux_todo_demo',),
+              LinkButton(title: 'StreamBuilder Demo', link: '/stream_builder_demo',),
+              LinkButton(title: 'StateFulBuilder Demo', link: '/stateful_builder_demo',),
             ],
           ),
         ),

@@ -183,7 +183,8 @@ class _DatetimeCupertinoPickerState extends State<DatetimeCupertinoPicker>
                   width: 100.0,
                   child: FlatButton(
                     onPressed: () {
-                      widget.callback([_currentYear, _currentDay, _currentDay]);
+                      print('${_currentYear}-${_currentMonth}-${_currentDay}');
+                      widget.callback([_currentYear, _currentMonth, _currentDay]);
                       Navigator.pop(context);
                     },
                     child: Text(
@@ -217,9 +218,15 @@ class _DatetimeCupertinoPickerState extends State<DatetimeCupertinoPicker>
                           looping: true,
                           onSelectedItemChanged: (index) {
                             print('changed year: ${yearList[index]}');
+                            var day = _currentDay;
                             setState(() {
                               _currentYear = yearList[index];
                               dayList = generateNumList(1, getDayNumByYearMonth(_currentYear, _currentMonth));
+//                              if (day > dayList[dayList.length - 1]) {
+//                                _currentDay = 1;
+//                              } else {
+//                                _currentDay = day;
+//                              }
                             });
                           },
                         ),
@@ -237,10 +244,19 @@ class _DatetimeCupertinoPickerState extends State<DatetimeCupertinoPicker>
                           itemExtent: 36,
                           looping: true,
                           onSelectedItemChanged: (index) {
-                            print('changed month: ${monthList[index]}');
+//                            print('changed month: ${monthList[index]}');
+//                            var day = _currentDay;
+//                            print('day:${day}');
                             setState(() {
                               _currentMonth = monthList[index];
-                              dayList = generateNumList(1, getDayNumByYearMonth(_currentYear, _currentMonth));
+                              dayList = generateNumList(1, getDayNumByYearMonth(_currentYear, monthList[index]));
+//                              print(dayList[dayList.length - 1]);
+//                              if (day > dayList[dayList.length - 1]) {
+////                                print(1);
+//                                _currentDay = 1;
+//                              } else {
+////                                print(2);
+//                              }
                             });
                           },
                         ),

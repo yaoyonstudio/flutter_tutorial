@@ -29,6 +29,8 @@ import 'package:flutter_tutorial/pages/others/communication/inherited_widget/Par
 import 'package:flutter_tutorial/pages/others/communication/inherited_widget2/ParentPage2.dart';
 import 'package:flutter_tutorial/pages/others/communication/scoped_model_demo/ParentPage3.dart';
 import 'package:flutter_tutorial/pages/others/communication/redux_demo/ReduxTodo.dart';
+import 'package:flutter_tutorial/pages/others/stream_builder_demo.dart';
+import 'package:flutter_tutorial/pages/others/stateful_builder_demo.dart';
 
 import 'package:flutter_tutorial/pages/others/CupertinoWidgets.dart';
 
@@ -73,4 +75,6 @@ final Map<String, WidgetBuilder> routes = {
   '/inherited_widget2': (BuildContext context) => new ParentPage2(),
   '/scoped_model_demo': (BuildContext context) => new ParentPage3(),
   '/redux_todo_demo': (BuildContext context) => new ReduxTodo(),
+  '/stream_builder_demo': (BuildContext context) => new StreamBuilderDemo(),
+  '/stateful_builder_demo': (BuildContext context) => new StatefulBuilderDemo(),
 };
